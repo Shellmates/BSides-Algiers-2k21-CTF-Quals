@@ -1,0 +1,45 @@
+name: "Challenge Name"
+author: "your Discord nickname"
+
+# One of the following categories:
+# - Pwn, Web, Reversing, Crypto, Forensics, Misc
+category: Pwn
+
+description: |
+  Description of the challenge goes here.
+  It can be written in multiple lines though.
+
+# Intial value of points awarded for solving the challenge.
+value: 500
+type: dynamic
+
+# Number of solves it takes to reach the minimum value.
+decay: 100
+
+# Minimum value.
+minimum: 50
+
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{@$#!_th3_p0l1c3!}
+
+tags:
+  - tag1
+  - tag2
+  - tag3
+
+# Files to be uploaded alongside the challenge in CTFd.
+# These paths are relative to the same directory where the yaml file is.
+files:
+  - ./pwnable.c
+  - ./pwnable 
+
+# The state of the challenge, hidden by default.
+state: hidden
+
+# Leave this as is.
+version: "0.1"

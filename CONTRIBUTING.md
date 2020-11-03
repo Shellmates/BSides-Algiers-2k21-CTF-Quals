@@ -31,7 +31,7 @@ You got a nice idea of a challenge that you want to add to the repository? Great
    - __Don't__ make Steganography challenges __unless__ the idea is amazing and perhaps teaches the player something new and useful.
    - __Don't__ use spaces in directory and filenames, use dashes (**-**) or (exclusive) underscores (**_**) instead.
    - __Do__ create a separate directory for your challenge with a coherent name, and put it inside the appropriate category folder.
-   - __Do__ initialize each challenge with a [`README.md`](./examples/README.md) file (where the write-up will reside) and a [`challenge.json`](./examples/challenge.json) file. (to make its deployment easier)
+   - __Do__ initialize each challenge with a [`README.md`](./examples/README.md) file (where the write-up will reside) and a [`challenge.yaml`](./examples/challenge.yaml) file. (to make its deployment easier with [ctfcli])
    - __Do__ write clean code for your challenge source code, this is highly appreciated.
    - __Do__ make a fun challenge that will teach or remind the player about an important concept.
    - __Do__ be creative in your challenge name, description and flag. The flag should be related to the challenge in some way.
@@ -83,3 +83,4 @@ At the end, I want to say thank you again to everyone willing to contribute to t
 
 [new issue]:https://github.com/Shellmates/BSides-Algiers-2k21-CTF-Quals/issues/new
 [ctf-design]:https://bit.ly/ctf-design
+[ctfcli]:https://github.com/CTFd/ctfcli
