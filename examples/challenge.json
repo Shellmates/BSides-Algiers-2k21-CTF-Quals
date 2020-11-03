@@ -1,0 +1,15 @@
+{
+  "name": "Challenge Name",
+  "description": "Description of the challenge.",
+  "author": "your Discord nickname",
+  "category": "^(Pwn|Web|Reversing|Crypto|Forensics|Misc)$",
+  "state": "hidden",
+  "type": "dynamic",
+  "value": "500",
+  "decay": "100",
+  "flag": "^shellmates{[A-Za-z0-9_@><:\\.\\-\\+\\$#!]{12,}}$",
+  "tags": [
+    "tag1",
+    "tag2"
+  ]
+}
