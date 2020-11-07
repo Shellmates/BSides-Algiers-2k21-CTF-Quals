@@ -1,0 +1,43 @@
+name: "Pizza Delivery Service"
+author: "LaidMalik"
+
+# One of the following categories:
+# - Pwn, Web, Reversing, Crypto, Forensics, Misc
+category: Pwn
+
+description: |
+  Take a look at this pizza delivery service ! It's a little idea I was working on.
+  Hopefully there's nothing to be worried about :)
+
+# Intial value of points awarded for solving the challenge.
+value: 500
+type: dynamic
+
+# Number of solves it takes to reach the minimum value.
+decay: 100
+
+# Minimum value.
+minimum: 50
+
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{m4N1Pul4t1nG_piz7a_ChunK$!}
+
+tags:
+
+# Files to be uploaded alongside the challenge in CTFd.
+# These paths are relative to the same directory where the yaml file is.
+files:
+  - ./challenge/pizza-service
+  - ./src.zip
+  - ./lib.zip
+
+# The state of the challenge, hidden by default.
+state: hidden
+
+# Leave this as is.
+version: "0.1"
