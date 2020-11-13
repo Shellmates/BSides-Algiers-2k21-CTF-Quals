@@ -1,0 +1,24 @@
+name: "SHmAc"
+author: "red0xff"
+
+category: crypto
+
+description:
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{go77a_st1ck_7o_s7andard5_th3n_:P}
+
+tags:
+  - crypto
+  - reversing
+
+state: hidden
+
+version: "0.1"
