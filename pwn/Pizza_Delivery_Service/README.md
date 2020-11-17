@@ -13,8 +13,7 @@
 
 - orders can still be edited after being delivered (freed) => tcache poisoning
 - orders can still be viewed after being delivered (freed) => get leaks
-- if we get control over `current_user->name_size` => stack buffer overflow (in login func
-tion)
+- if we get control over `current_user->name_size` => stack buffer overflow (in login function)
 
 ### TODO
 

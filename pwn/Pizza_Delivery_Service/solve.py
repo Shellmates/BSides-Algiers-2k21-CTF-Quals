@@ -24,7 +24,7 @@ def main():
     # - orders can still be viewed after being delivered (freed) => get leaks
     # - if we get control over current_user->name_size => stack buffer overflow (in login function)
 
-    # name is empty (NULL) so that tcache would still be usable later on
+    # name is empty (points to a null byte) so that tcache would still be usable later on
     name = ""
     io.sendlineafter("characters max) : ", name)
 
