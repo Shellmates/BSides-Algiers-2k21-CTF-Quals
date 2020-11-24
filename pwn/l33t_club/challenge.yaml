@@ -1,0 +1,27 @@
+name: "l33t club"
+author: "LaidMalik"
+
+category: Pwn
+
+description: |
+  Pssst.. Have you heard of the l33t club? I heard they welcome anyone who can prove themself...
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{too_l1ttl3_for_u5_to_h4ndl3!}
+
+tags:
+
+files:
+  - ./challenge/l33t-club
+  - ./libc-2.27.so
+
+state: hidden
+
+version: "0.1"
