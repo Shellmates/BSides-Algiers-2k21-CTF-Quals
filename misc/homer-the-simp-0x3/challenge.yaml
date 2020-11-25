@@ -1,0 +1,23 @@
+name: "Homer The Simp - 0x3"
+author: "hfz"
+
+category: Misc
+
+description:
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{3v3n_pYt0rcH_d0cUm3nt@t10n_w4rnS_y0u_4b0ut_1T}
+
+tags:
+  - pentest
+
+state: hidden
+
+version: "0.1"

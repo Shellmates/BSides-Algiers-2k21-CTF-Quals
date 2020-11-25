@@ -1,0 +1,1 @@
+*/5 * * * * find /home/homer/exam/* -type f -delete

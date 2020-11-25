@@ -1,0 +1,24 @@
+name: "Homer The Simp - 0x4"
+author: "hfz"
+
+category: Misc
+
+description:
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{m1sS10n_4cC0mplisHed_t1m3_t0_g0_h0m3}
+
+tags:
+  - pentest
+  - crypto
+
+state: hidden
+
+version: "0.1"
