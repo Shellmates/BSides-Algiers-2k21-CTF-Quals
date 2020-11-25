@@ -22,7 +22,7 @@ try to find some clues.
 
 ## Write-up
 
-This one is pretty straightforward. Visit twitter and search for `Homer The Simp`, the [account with the described picture](https://twitter.com/homerthesimp56) (the one with a computer) is the correct one.  
+This one is pretty straightforward. Visit twitter and search for `HomerTheSimp`, you'll notice an [account](https://twitter.com/homerthesimp56) with a distinguishable bio.  
 One of Homer's tweets contains a great video link that you should definitely check out, and down on the replies, you find the `sftp password` along with the `flag`.  
 
 Flag: `shellmates{w3_c4ught_h1m_s1mp!ng_l4ds}`
