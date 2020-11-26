@@ -8,6 +8,6 @@
 > Can you take a look at it .
 
 ## Write-up
-	*TODO*
+	TODO
 
 Flag: `shellmates{z1ppity_5hiFty_th3_fl4g_1s_n0w_YouR_pr0p3rty}`
