@@ -1,0 +1,28 @@
+name: "Revenge of the ZIP"
+author: "Ouxs"
+
+category: misc
+
+description: |
+  A friend sent me this file saying it contains important data , but I couldn't extract it . 
+  Can you take a look at it .
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{z1ppity_5hiFty_th3_fl4g_1s_n0w_YouR_pr0p3rty}
+
+tags:
+  - misc
+
+files:
+  - ./challenge/chall.zip
+
+state: hidden
+
+version: "0.1"
