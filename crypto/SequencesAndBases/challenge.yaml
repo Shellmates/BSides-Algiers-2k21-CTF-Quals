@@ -1,0 +1,27 @@
+
+name: "Sequences & Bases"
+author: "m0kr4n3"
+
+category: crypto
+
+description: |
+  TODO
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{Just_a_sm4ll_fl4g}
+
+tags:
+  - crypto
+
+files:
+  - ./SequencesAndBases.zip
+
+state: hidden
+
+version: "0.1"
