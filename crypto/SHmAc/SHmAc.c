@@ -74,7 +74,7 @@ char* base64_decode(unsigned char* input, size_t* size)
 			(input[len] < '0' || input[len] > '9') &&
 			(input[len] != '+' && input[len] != '/' && input[len] != '=')
 		) break;
-	
+
 	char* output = (char*)malloc(len);
 	base64_decodestate state;
 	base64_init_decodestate(&state);
