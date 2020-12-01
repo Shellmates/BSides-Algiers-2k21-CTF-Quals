@@ -18,6 +18,9 @@ flags:
 tags:
   - crypto
 
+requirements:
+  - "Homer The Simp - 0x3"
+
 state: hidden
 
 version: "0.1"
