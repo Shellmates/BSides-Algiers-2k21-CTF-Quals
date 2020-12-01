@@ -18,6 +18,9 @@ flags:
 tags:
   - pentest
 
+requirements:
+  - "Homer The Simp - 0x2"
+
 state: hidden
 
 version: "0.1"

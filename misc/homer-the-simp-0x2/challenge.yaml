@@ -19,6 +19,9 @@ tags:
   - network
   - pentest
 
+requirements:
+  - "Homer The Simp - 0x1"
+
 state: hidden
 
 version: "0.1"
