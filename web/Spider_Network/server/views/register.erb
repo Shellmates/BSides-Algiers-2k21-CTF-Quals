@@ -1,0 +1,45 @@
+<fieldset>
+  <legend>Register</legend>
+
+  <form id="form" method="post" enctype="multipart/form-data" autocomplete="off">
+    <% if err %>
+    <ul class="errorMessages">
+      <li>
+        <% if err[:field] %>
+          <span><%=h err[:field] %> :</span>
+        <% end %>
+        <%=h err[:msg] %>
+      </li>
+    </ul>
+    <% end %>
+
+    <div>
+      <label>User</label>
+      <input class="inputtext" name="user" required autofocus>
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input class="inputtext" name="email" type="email" required>
+    </div>
+
+    <div>
+      <label for="file">Avatar</label>
+      <input id="file" class="inputfile" name="avatar" type="file">
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input class="inputtext" name="password" type="password" required>
+    </div>
+
+    <div>
+      <label>Confirm Password</label>
+      <input class="inputtext" name="confirm" type="password" required>
+    </div>
+  </form>
+
+  <div>
+    <button class="submit" form="form" type="submit" value="Register">Register</button>
+  </div>
+</fieldset>

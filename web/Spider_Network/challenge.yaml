@@ -1,0 +1,21 @@
+name: "Spider Network - 0x1"
+author: "LaidMalik"
+
+category: Web
+
+description: |
+  Come join this revolutionary new social media platform designed for Spider-People and their allies !
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{w3lc0me_2_th3_5pid3r_v3rs3}
+
+state: hidden
+
+version: "0.1"

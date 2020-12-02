@@ -1,0 +1,158 @@
+body {
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f1f1f;
+  color: white;
+  /* font-family: "Arial Black", Gadget, sans-serif; */
+}
+
+/* p { */
+/*   margin-bottom: 1.5em; */
+/*   margin-top: 1.5em; */
+/* } */
+
+main {
+  width: 50%;
+}
+
+.grid {
+  display: flex;
+  padding-top: 1em;
+}
+
+.user {
+  width: 8em;
+  margin-right: 4em;
+}
+
+.user h2 {
+  margin-top: 0;
+}
+
+nav {
+  margin-top: 2em;
+}
+
+section,
+nav {
+  margin-bottom: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  margin-right: 2em;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #e51521;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 8em;
+  margin-bottom: 1em;
+  border-radius: 80px;
+}
+
+.box {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.box-avatar {
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  border-radius: 40px;
+}
+
+.box-body {
+  flex: 1;
+}
+
+.submit {
+  background-color: #dd4f56;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 18px;
+  margin-top: 4px;
+  margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #e51521;
+}
+
+.inputtext {
+  display: block;
+  border-color: #e51521;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+  margin-top: 4px;
+}
+
+.inputfile {
+  display: block;
+  margin-top: 4px;
+}
+
+form div {
+  padding: 0.5em;
+}
+
+textarea {
+  border-color: #e51521;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 5px;
+  margin-top: 4px;
+  display: block;
+}
+
+fieldset {
+  border-radius: 10px;
+}
+
+/* for errors */
+
+.errorMessages {
+  display: block;
+  list-style-type: disc;
+  margin: 10px 10px 10px 10px;
+  padding: 8px 35px 8px 30px;
+  color: #e51521;
+  background-color: #f2dede;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: medium;
+}
+
+.errorMessages span {
+  font-weight: bold;
+}

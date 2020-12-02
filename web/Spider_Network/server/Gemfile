@@ -1,0 +1,8 @@
+source "http://rubygems.org"
+gem "sqlite3"
+gem "sinatra"
+gem "bcrypt"
+gem "mail"
+gem "sucker_punch"
+gem "dotenv"
+gem "mimemagic"
