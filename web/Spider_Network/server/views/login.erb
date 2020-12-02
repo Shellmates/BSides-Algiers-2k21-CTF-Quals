@@ -1,0 +1,34 @@
+<fieldset>
+  <legend>Login</legend>
+
+  <form id="form" method="post" autocomplete="off">
+    <% if err %>
+    <ul class="errorMessages">
+      <li>
+        <% if err[:field] %>
+          <span><%=h err[:field] %> :</span>
+        <% end %>
+        <%=h err[:msg] %>
+      </li>
+    </ul>
+    <% end %>
+    
+    <div>
+      <label>User</label>
+      <input class="inputtext" name="user" required autofocus>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input class="inputtext" name="password" type="password" required>
+    </div>
+
+    <div>
+      <a href="/forgot-password">Forgot password?</a>
+    </div>
+  </form>
+
+  <div>
+    <button class="submit" form="form" type="submit" value="Login">Login</button>
+  </div>
+</fieldset>

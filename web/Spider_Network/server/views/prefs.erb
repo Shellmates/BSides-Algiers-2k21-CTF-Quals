@@ -1,0 +1,16 @@
+<section>
+  <fieldset>
+    <legend>Preferences</legend>
+
+    <form id="form" method="post" autocomplete="off">
+      <div>
+        <label>Description</label>
+        <textarea name="description"><%=h user[:description] %></textarea>
+      </div>
+      
+      <div>
+      <button class="submit" form="form" type="submit" value="Submit">Submit</button>
+      </div>
+    </form>
+  </fieldset>
+</section>
