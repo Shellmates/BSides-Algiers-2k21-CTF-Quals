@@ -8,7 +8,7 @@ Snail Corp got phished (again), but this time it's not that kind of usual emails
 
 The phishing email was so well crafted that it tricked their marketing employee into thinking that the document was highly confidential, and contained plans for infrastructure migration to provide better internet services–but we know far well that this isn't something to expect from Snail Corp, seriously, who would believe that?
 
-Unfortunately, the employee–dying of curiosity–downloaded the attachment and detonated its malicious behavior, which resulted in his files being wiped. The employee's machine was then used to move laterally inside the network and compromise other machines to achieve persistence while staying stealthy. This happened months ago and it's only recently that IoC's started to pop out.
+Unfortunately, the employee–dying of curiosity–downloaded the attachment and detonated its malicious behavior, which resulted in the compromise of his machine. The employee's device was then used to move laterally inside the network and compromise other machines to achieve persistence while staying stealthy. This happened months ago and it's only recently that IoC's started to pop out.
 
 The security team tried to isolate the compromised machines and extract the malware sample out of them, but unfortunately, the malware deleted itself before they had a chance to extract it and didn't leave any evidence. This brought them back to case zero, all they have is the phishing email and the attachment.
 
