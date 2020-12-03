@@ -1,0 +1,52 @@
+<h2>
+  <a href="/user/<%= user %>"><%=h user %></a>
+</h2>
+
+<% if user == "admin" %>
+    <div>
+      <p>shellmates{w3lc0me_2_th3_5pid3r_v3rs3} 🕸</p>
+    </div>
+<% end %>
+
+<hr>
+
+<!-- Sharing posts is disabled -->
+
+<%# <section> %>
+<%#   <fieldset> %>
+<%#     <legend>Share a post</legend> %>
+    
+<%#     <form id="form" method="post" autocomplete="off"> %>
+<%#     <% if err %1> %>
+<%#       <ul class="errorMessages"> %>
+<%#         <li> %>
+<%#           <% if err[:field] %1> %>
+<%#             <span><%=h err[:field] %1> :</span> %>
+<%#           <% end %1> %>
+<%#           <%=h err[:msg] %1> %>
+<%#         </li> %>
+<%#       </ul> %>
+<%#     <% end %1> %>
+    
+<%#     <div> %>
+<%#       <textarea name="content" rows="3" cols="30" placeholder="Say something clever"></textarea> %>
+<%#     </div> %>
+
+<%#     <div> %>
+<%#       <button class="submit" form="form" type="submit" value="Post">Post</button> %>
+<%#     </div> %>
+<%#     </form> %>
+<%#   </fieldset> %>
+<%# </section> %>
+
+<section>
+  <% posts.each do |p| %>
+    <div class="box">
+      <img class="box-avatar" src="<%= p[:avatar] %>" />
+      <div class="box-body">
+        <a href="/user/<%= p[:user] %>"><%=h p[:user] %></a> ◇ <%=h p[:date] %>
+        <p> <%=h(p[:content]).gsub(/(\r\n|\r|\n)/, "<br>") %> </p>
+      </div>
+    </div>
+  <% end %>
+</section>
