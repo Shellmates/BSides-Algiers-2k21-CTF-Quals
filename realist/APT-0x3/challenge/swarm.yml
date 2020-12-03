@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  tor:
+    image: apt213/tor
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 100m
+    depends_on:
+      - web
+
+  web:
+    image: apt213/web
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 100m
