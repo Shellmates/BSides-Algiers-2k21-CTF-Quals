@@ -1,0 +1,4 @@
+Flask==1.1.2
+pyjwt==1.7.1
+lxml
+pycryptodome
