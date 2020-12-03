@@ -18,8 +18,8 @@ description: |
   
   Unfortunately, the employee–dying of curiosity–downloaded the
   attachment and detonated its malicious behavior, which resulted
-  in his files being wiped. The employee's machine was then used
-  to move laterally inside the network and compromise other
+  in the compromise of his machine. The employee's device was then
+  used to move laterally inside the network and compromise other
   machines to achieve persistence while staying stealthy. This
   happened months ago and it's only recently that IoC's started
   to pop out.
