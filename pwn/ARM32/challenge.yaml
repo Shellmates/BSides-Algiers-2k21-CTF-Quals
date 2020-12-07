@@ -1,0 +1,27 @@
+name: "ARM32"
+author: "m0kr4ne & LaidMalik"
+
+category: Pwn
+
+description: |
+  Imagine a binary exploitation challenge with no ASLR, no PIE, RWX segments... but it runs on ARM! Should be fun, right?
+  Note: the binary is run using qemu-arm (qemu-user).
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{ARM_Xpl0it$_4r3_C00l}
+
+tags:
+
+files:
+  - ./challenge/arm32
+
+state: hidden
+
+version: "0.1"
