@@ -1,0 +1,5 @@
+set architecture arm
+set sysroot /usr/arm-linux-gnueabihf/
+target remote localhost:1234
+b vuln
+c
