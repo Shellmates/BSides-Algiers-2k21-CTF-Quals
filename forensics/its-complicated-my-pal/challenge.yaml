@@ -1,0 +1,30 @@
+name: "It's Complicated My Pal"
+author: "hfz"
+
+category: Forensics
+
+description: |
+  Hey pal, I was sniffing some packets and stumbled upon some
+  weird traffic, no idea what it is though. Could you take a
+  look at it? It's complicated for me and I can't analyze it
+  by myself.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{icmp_p@yl04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}
+
+tags:
+  - exfiltration
+
+files:
+  - ./capture.tar.gz
+
+state: hidden
+
+version: "0.1"
