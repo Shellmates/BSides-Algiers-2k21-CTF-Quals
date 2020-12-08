@@ -3,7 +3,7 @@
 export SSHPASS="m@rge1sl1f3"
 
 sshpass -e sftp -oStrictHostKeyChecking=no -oBatchMode=no -b - sftp@homer << END
-   get -r exam /home/marge/
+   get -r /tmp/s3cret_d1r_fed14cdf/exam /home/marge/
    bye
 END
 
