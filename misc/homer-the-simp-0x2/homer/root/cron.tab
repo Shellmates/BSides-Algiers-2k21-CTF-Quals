@@ -1,2 +1,1 @@
-*   * * * * sleep 50 && cp -p /tmp/tmp.*/exam/* /tmp/s3cret_d1r_fed14cdf/exam/
-*/5 * * * * find /home/homer/exam/* -type f -delete
+* * * * * /root/script.sh
