@@ -50,7 +50,7 @@ You got a nice idea of a challenge that you want to add to the repository? Great
 
 Here's a table describing the impact of the amount of __work__ and __inspiration__ on the quality of a challenge:
 
-| Tasks that need ⬇️+➡️ are | little work           | some work              | a lot of work        | too much work        |
+| Tasks that need ⬇️+➡️ are  | little work           | some work              | a lot of work        | too much work        |
 |--------------------------|-----------------------|------------------------|----------------------|----------------------|
 | __little inspiration__   | _Very easy_           | Relaxing/Disappointing | Uninteresting        | `Boring`             |
 | __some inspiration__     | Easy/Satisfying       | Fun                    | Exhausting           | `Frustrating`        |
