@@ -29,6 +29,7 @@ COPY sudoers /etc/sudoers
 COPY isolate.sh /bin/isolate.sh
 
 RUN chmod +x /root/entrypoint.sh && \
+    chmod +x /root/script.sh && \
     chmod +x /bin/isolate.sh && \
     ln -sf /dev/null /root/.bash_history && \
     chmod 440 /etc/sudoers && \

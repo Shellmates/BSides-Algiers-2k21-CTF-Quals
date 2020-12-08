@@ -1,2 +1,1 @@
-*   * * * * /root/script.sh
-*/4 * * * * sleep 50 && rm -rf /home/marge/exam
+* * * * * /root/script.sh
