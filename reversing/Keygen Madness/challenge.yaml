@@ -1,0 +1,30 @@
+name: "Keygen Madness"
+author: "red0xff"
+
+category: reversing
+
+description: |
+Piracy FTW!
+
+The goal from this challenge is to find the correct serial of the user "shellmates" (with no quotes).
+
+The flag is : shellmates{found_serial}, where found_serial is replaced with the correct serial you found.
+
+Note: The challenge is clean, no malicious behaviour.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{AU554-S2Q1Z-TM2KX-0ZWAX-QZHNM}
+
+tags:
+  - reversing
+
+state: hidden
+
+version: "0.1"
