@@ -171,7 +171,7 @@ Real serial computation:
 Func success()
    ; Todo: make this a whole new GUI creation, and hide the original GUI
    GUICtrlSetData($result_label, "Correct serial!")
-   GUICtrlSetColor($result_label, 0xff00)
+   GUICtrlSetColor($result_label, 0x014709)
 Endfunc
 
 Func wrong()
@@ -242,13 +242,22 @@ Func real_check()
 Endfunc
 inject_shellcode()
 ;MsgBox(0, "test", "ptr = " & $shellcode_address)
-GUICreate("KeygenMe (by red0xff)", 400, 300)
-Local $username_input = GUICtrlCreateInput("a", 100, 30)
+GUICreate("KeygenMe (by red0xff)", 500, 300)
+Local $username_lbl = GUICtrlCreateLabel("Username", 10, 40, 100, 60)
+GUICtrlSetFont($username_lbl, 12, 700, 0, "Tunga")
+
+Local $serial_lbl = GUICtrlCreateLabel("Serial", 10, 100, 100, 60)
+GUICtrlSetFont($serial_lbl, 12, 700, 0, "Tunga")
+
+Local $username_input = GUICtrlCreateInput("", 150, 40, 210, 30)
 GUICtrlSetLimit($username_input, 16)
-Local $serial_input = GUICtrlCreateInput("b", 100, 70)
-Local $result_label = GUICtrlCreateLabel("", 100, 100, 200, 50)
+GUICtrlSetFont($username_input, 12, 700, 0, "Tunga")
+Local $serial_input = GUICtrlCreateInput("", 100, 100, 300, 30)
+Local $result_label = GUICtrlCreateLabel("", 200, 150, 200, 50)
+GuiCTRLSetFont($result_label, 12, 700, 0, "Tunga")
 GUICtrlSetLimit ($serial_input, 29) ; aaaaa-bbbbb-ccccc-ddddd-eeeee
-$check_button = GUICtrlCreateButton("check", 200, 200, 60)
+GUICtrlSetFont($serial_input, 12, 700, 2, "Arial")
+$check_button = GUICtrlCreateButton("check", 100, 200, 300, 50)
 GUICtrlSetOnEvent($check_button, "real_check")
 GUISetOnEvent($GUI_EVENT_CLOSE, "close")
 GUISetState(@SW_SHOW)

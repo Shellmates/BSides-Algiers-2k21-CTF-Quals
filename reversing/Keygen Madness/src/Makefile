@@ -2,7 +2,8 @@
 all:
 	.\compile_autoit.bat
 	gcc dll.c -odll.dll -shared -lbcrypt
-	gcc main.c -okeygen_madness.exe -lbcrypt
+	windres main.rc -O coff -o main.res
+	gcc main.c main.res -okeygen_madness.exe -lbcrypt -mwindows
 	ruby encode_resource.rb crackme.exe 99 0x2f crackme.exe.bin
 	ruby encode_resource.rb dll.dll 0x55 0xe3 dll.dll.bin
 	ResourceHacker.exe -open keygen_madness.exe -resource crackme.exe.bin -action add -mask RCDATA,Kerne132, -save new.exe
