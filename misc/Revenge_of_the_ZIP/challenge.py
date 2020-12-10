@@ -22,7 +22,7 @@ def scramble_img(img):
 
 	for i in range(l):
 		backup = []
-		key = random.randint(0,l)	
+		key = random.randint(0,w-1)	
 		keys.append(str(key)+"\n")
 		
 		for j in range(w):
