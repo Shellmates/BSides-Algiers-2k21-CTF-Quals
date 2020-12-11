@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  keygen:
+    image: keygen-madness/keygen:1.0
+    ports:
+      - '2222:1337'
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 100m
