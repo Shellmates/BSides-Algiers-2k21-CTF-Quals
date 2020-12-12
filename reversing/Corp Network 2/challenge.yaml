@@ -24,6 +24,9 @@ tags:
   - forensics
   - reversing
 
+requirements:
+  - "Corp Network"
+
 state: hidden
 
 version: "0.1"
