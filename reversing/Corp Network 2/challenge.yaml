@@ -1,0 +1,27 @@
+name: "Corp Network - 2"
+author: "red0xff"
+
+category: reversing
+
+description: |
+Note: This is a follow-up on the Corp-Network forensics challenge
+
+The goal from this challenge is to find out exactly what was exfiltrated.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{iwr_w1th_rc4_encrypted_p4yload}
+
+tags:
+  - forensics
+  - reversing
+
+state: hidden
+
+version: "0.1"
