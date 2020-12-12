@@ -8,6 +8,8 @@ Note: This is a follow-up on the Corp-Network forensics challenge
 
 The goal from this challenge is to find out exactly what was exfiltrated.
 
+You are given the network capture, with the traffic network administrators flagged as suspicious
+
 value: 500
 type: dynamic
 
