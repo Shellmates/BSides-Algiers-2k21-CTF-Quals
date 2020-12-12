@@ -1,0 +1,31 @@
+name: "Corp Network"
+author: "red0xff"
+
+category: forensics
+
+description: |
+a company suspects a targeted attack, after network administrators reported some unusual network traffic, after a first investigation,
+they found an sd-card in an employer's desk, the sd-card contained only a single binary file named inject.bin
+
+We believe this attack is targeted, as such, it might not be easy to reproduce it on a lab environment, for this challenge, your goal
+is to find out how to get it to exfiltrate data.
+
+The flag is : `shellmates{string_you_found}`, where `string_you_found` is replaced with the string you found while analyzing it.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{INTEGRATZENCORP}
+
+tags:
+  - forensics
+  - reversing
+
+state: hidden
+
+version: "0.1"
