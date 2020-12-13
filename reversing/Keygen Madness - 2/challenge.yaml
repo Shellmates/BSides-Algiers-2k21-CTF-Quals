@@ -6,7 +6,7 @@ category: reversing
 description: |
 Piracy FTW!
 
-This is part 2 of Keygen Madness, YOU SHOULD ATTEMPT PART 1 FIRST.
+This is part 2 of Keygen Madness
 
 Same executable, the goal this time is to develop a keygen for the challenge.
 
@@ -25,6 +25,9 @@ minimum: 50
 
 flags:
   - shellmates{n3v3r_r0ll_y0ur_0wn_4nti-RE_:PP}
+
+requirements:
+  - "Keygen Madness"
 
 tags:
   - reversing
