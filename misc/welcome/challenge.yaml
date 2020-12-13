@@ -1,0 +1,27 @@
+name: "Welcome"
+author: "hfz"
+
+category: Misc
+
+description: |
+  Welcome to BSides Algiers 2021 Quals!  
+  We hope you enjoy the challenges and have a memorable journey.
+  Join our Discord server: https://discord.gg/KTzA4hzFEN, once there,
+  ask `/bin/cat`, he knows better.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{w3lc0me_t0_BS1d3s_4lg1er$_2021}
+
+tags:
+  - welcome
+
+state: hidden
+
+version: "0.1"
