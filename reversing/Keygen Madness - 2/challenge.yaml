@@ -1,0 +1,37 @@
+name: "Keygen Madness - 2"
+author: "red0xff"
+
+category: reversing
+
+description: |
+Piracy FTW!
+
+This is part 2 of Keygen Madness
+
+Same executable, the goal this time is to develop a keygen for the challenge.
+
+Network service: nc <host> <port>
+
+Note: the network service is protected with a PoW mechanism to prevent abuse,
+but that is not part of the challenge, if you're having trouble solving the PoW,
+we will be glad to help you on your programming language of choice.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{n3v3r_r0ll_y0ur_0wn_4nti-RE_:PP}
+
+requirements:
+  - "Keygen Madness"
+
+tags:
+  - reversing
+
+state: hidden
+
+version: "0.1"
