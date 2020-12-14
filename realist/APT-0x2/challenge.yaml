@@ -1,0 +1,35 @@
+name: "APT213 - RApTor"
+author: "hfz"
+
+category: Realist
+
+description: |
+  Good job. Thanks to you we could retrieve the malware sample
+  to determine its behaviour. Your next task is to reverse
+  engineer the malware and uncover its mystery, this should
+  be fairly easy...
+
+  PS: The flag for this challenge is the `SHA1` hash of the
+  Command & Control server's hostname wrapped inside the usual
+  flag format, i.e, shellmates{`sha1(hostname)`}.
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{86e2b61465e9481131f16d0db09c9e9c3f06dab3}
+
+tags:
+  - reversing
+  - malware
+
+requirements:
+  - "APT213 - There's a phish in the mailbox"
+
+state: hidden
+
+version: "0.1"
