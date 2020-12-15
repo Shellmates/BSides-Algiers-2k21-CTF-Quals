@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  mate:
+    image: bot-takeover/mate:latest
+    depends_on:
+      - openssl
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+
+  openssl:
+    image: bot-takeover/openssl:latest
+    security_opt:
+      - seccomp:./profile.json
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
