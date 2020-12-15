@@ -1,6 +1,6 @@
 from Crypto.Util.number import long_to_bytes
 from functools import reduce
-from secret import flag 
+from secret import flag #flag format : shellmates{}
 
 def Str2Bin(s):
     return ''.join(bin(ord(i))[2:].zfill(8) for i in s)
