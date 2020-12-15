@@ -1,4 +1,4 @@
-# Spider Network - 0x1
+# Spider Network
 
 **`Author:`** [LaidMalik](https://github.com/malikDaCoda)
 
@@ -23,7 +23,7 @@
   - brute force the secret key to generate a token that matches
 - determining the admin email address :
   - with basic enumeration, we can find it on the timeline when registering and logging into an account
-- with that we can generate the admin token and log in to take the flag and ssh creds for second part of the challenge
+- with that we can generate the admin token and log in to take the flag
 
 ### TODO
 
