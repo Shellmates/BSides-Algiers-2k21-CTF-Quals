@@ -1,0 +1,21 @@
+name: "Bot Takeover - 0x2"
+author: "LaidMalik & Ouxs & hfz"
+
+category: misc
+
+description: |
+  If you managed to take over the bot.. Can you control it now ?
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{Y0u_Rea11y_7ru5ted_A_b0t_fOr_your_d4t4!!!}
+
+state: hidden
+
+version: "0.1"

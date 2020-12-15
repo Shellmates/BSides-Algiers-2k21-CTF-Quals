@@ -1,0 +1,22 @@
+name: "Bot Takeover - 0x1"
+author: "LaidMalik & Ouxs & hfz"
+
+category: misc
+
+description: |
+  Check out our latest service known as "Mate", a friendly bot and a very secure password manager based on the latest encryption technology (OPENSSL).
+  You can find him on our discord server https://discord.gg/F7rzGXmQ
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{ev3n_D1$c0Rd_b0Ts_c4n_b3_vUln3r@ble_t0_c0Mm@nd_1nj3cti0n}
+
+state: hidden
+
+version: "0.1"
