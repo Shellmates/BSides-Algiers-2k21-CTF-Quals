@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
   <a href="https://bsidesalgiers.com">
-    <img src="https://res.cloudinary.com/hfz/image/upload/v1604421080/bsides_algiers_logo.png" alt="Logo" width="200">
+    <img src="https://res.cloudinary.com/hfz/image/upload/v1607899536/BSides_logo.png" alt="Logo" width="200">
   </a>
 
   <h3 align="center">BSides Algiers</h3>
