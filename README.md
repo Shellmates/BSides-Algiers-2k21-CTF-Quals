@@ -6,11 +6,7 @@
     <img src="https://res.cloudinary.com/hfz/image/upload/v1607899536/BSides_logo.png" alt="Logo" width="200">
   </a>
 
-  <h3 align="center">BSides Algiers</h3>
-
-  <p align="center">
-    CTF Qualification Round
-  </p>
+  <h3 align="center">CTF Qualification Round</h3>
 </p>
 
 ## About
