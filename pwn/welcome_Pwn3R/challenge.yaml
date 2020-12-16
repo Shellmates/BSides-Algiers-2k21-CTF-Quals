@@ -1,0 +1,26 @@
+name: "Welcome Pwn3R"
+author: "LaidMalik"
+
+category: Pwn
+
+description: |
+  Welcome Pwn3R!! We have prepared this challenge to warm you up for what's coming next ;)
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{g000d_s7@rt_Pwn3R_U_c4n_c0Nt1Nu3!!}
+
+tags:
+
+files:
+  - ./challenge/welcome
+
+state: hidden
+
+version: "0.1"
