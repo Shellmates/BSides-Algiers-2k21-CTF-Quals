@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Trashbin</title>
+    </head>
+    <body>
+        <h1>Trashbin: A pastebin like app for non-gui users</h1>
+        <div style="text-align: center;">
+            <div style="display: inline-block; text-align: left;">
+                <h3>Create a new paste:</h3>
+                POST /paste/new HTTP/1.1<br>
+                {"title": "foo", "text": "bar"}<br>
+                <h3>Consult a paste:</h3>
+                GET /paste/{id} HTTP/1.1<br>
+                <h3>Consult a paste field:</h3>
+                GET /paste/{id}/{field} HTTP/1.1<br>
+                <h3>Delete a paste:</h3>
+                DELETE /paste/{id} HTTP/1.1<br>
+            </div>
+        </div>
+        <h2>That being said, don't give your paste id to anyone, otherwise you risk getting it deleted!</h2>
+        <h2>Thancc.</h2>
+    </body>
+    <style type="text/css">
+        body {
+            color: white;
+            background-color: black;
+            font-family: "Courier New";
+            text-align: center;
+        }
+        h3 {
+            font-weight: bold;
+        }
+    </style>
+</html>
+
