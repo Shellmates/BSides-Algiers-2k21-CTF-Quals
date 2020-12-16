@@ -4,5 +4,5 @@ COPY app /app
 WORKDIR /app
 RUN chown -R nobody:nogroup /app
 USER nobody
-EXPOSE 5000
+EXPOSE 8080
 ENTRYPOINT ["flask", "run"]
