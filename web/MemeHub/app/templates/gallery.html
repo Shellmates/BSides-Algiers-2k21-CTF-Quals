@@ -1,0 +1,25 @@
+{% if images %}
+  <div class="image-container img-responsive" id="current">
+      <img class="main-img" src="{{ image_url }}" alt="Upload some images in the gallery">
+      <div>
+	{% if not title_error %}
+	  <h2 class="img-title">{{ image_title|safe }}</h2>
+	{% else %}
+	  <h2 class="img-title img-title-error"><i>An error occured while displaying the title</i></h2>
+	{% endif %}
+      </div>
+  </div>
+
+  <div class="imgs">
+      {% for image in images %}
+	  <div class="img-container">
+	    <img src="{{ url_for('send_image', path=image['path']) }}" />
+	    <h2 class="img-title" style="display: none">{{ image['title'] }}</h2>
+	  </div>
+      {% endfor %}
+  </div>
+{% else %}
+  <div class="no-img-found">
+    <h1>No images found</h1>
+  </div>
+{% endif %}
