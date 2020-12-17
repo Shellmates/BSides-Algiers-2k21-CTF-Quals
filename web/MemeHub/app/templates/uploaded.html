@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'head-imports.html' %}
+    <style>
+        .container {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        {% include 'navbar.html' %}
+    </header>
+
+    <section class="container" id="content">
+	<h1>File Uploaded!</h1>
+	<a class="btn" href="/">Go back to gallery</a>
+    </section>
+
+    {% include 'scripts.html' %}
+</body>
+
+</html>

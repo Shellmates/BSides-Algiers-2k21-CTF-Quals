@@ -1,0 +1,21 @@
+name: "MemeHub"
+author: "Malik"
+
+category: Web
+
+description: |
+  Oh! There you are! Let me just introduce you to the best spot for top-tier memes: MemeHub!!
+
+value: 500
+type: dynamic
+
+decay: 100
+
+minimum: 50
+
+flags:
+  - shellmates{tR0ll1nG_@_mem3R_w1tH_4_w3ll_cr4fT3d_1nj3ct10n}
+
+state: hidden
+
+version: "0.1"
