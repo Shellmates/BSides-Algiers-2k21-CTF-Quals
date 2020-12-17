@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'head-imports.html' %}
+  </head>
+
+  <body>
+    <header>{% include 'navbar.html' %}</header>
+
+    {% if error %}
+    <section class="error-container">
+      <h1 class="error-title">Error</h1>
+      <h4 class="error-msg">{{ error }}</h4>
+    </section>
+    {% endif %}
+
+    <section class="container" id="content">
+      <div class="custom-file mb-3">
+        <form
+          id="upload-form"
+          action="{{ url_for('upload_file') }}"
+          method="POST"
+          enctype="multipart/form-data"
+          autocomplete="off"
+        >
+          <div>
+            <label class="file-picker-label-image">Image</label>
+            <label class="file-picker-label" for="file-picker"
+              >Choose image</label
+            >
+            <input
+              id="file-picker"
+              type="file"
+              name="file"
+              accept="image/*"
+              required
+              hidden
+            />
+            <span id="file-chosen">No file chosen</span>
+          </div>
+
+          <div class="title-section">
+            <input type="text" name="title" />
+            <label class="file-title-label" for="title">
+              <span class="content-title">Title</span>
+            </label>
+          </div>
+
+          <div>
+            <button
+              class="submit"
+              type="submit"
+              value="Upload!"
+              form="upload-form"
+            >
+              Upload!
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    {% include 'scripts.html' %}
+    <script src="{{ url_for('static', filename='scripts/chosenFile.js') }}"></script>
+  </body>
+</html>
