@@ -1,4 +1,4 @@
-# Spider Network
+# MemeHub
 
 **`Author:`** [Malik](https://github.com/malikDaCoda)
 
