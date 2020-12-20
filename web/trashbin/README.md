@@ -23,7 +23,7 @@ result = self.execute_query(
 ```
 Now you're probably noticing how easy this is. Although the developer used prepared queries, he chose to make the column name dynamic, and construct the query using untrusted data.  
 We can leak all the pastes using `group_concat`, then filter them out to get the flag.
-```
+```bash
 # Create a new paste and get its ID (we need a valid paste, otherwise it would return: "no such paste"
 paste_id=$(curl -sX POST -H "Content-type: application/json" -d '{"title": "test", "text": "test"}' http://chall.bsidesalgiers.com:8001/paste/new | jq .url | tr -d '"' | cut -d'/' -f3)
 # Leak the flag
