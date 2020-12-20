@@ -1,5 +1,5 @@
 <h2>
-  <a href="/user/<%= user %>"><%=h user %></a>
+  <a href="/user/<%=h user %>"><%=h user %></a>
 </h2>
 
 <% if user == "admin" %>
@@ -42,9 +42,9 @@
 <section>
   <% posts.each do |p| %>
     <div class="box">
-      <img class="box-avatar" src="<%= p[:avatar] %>" />
+      <img class="box-avatar" src="<%=h p[:avatar] %>" />
       <div class="box-body">
-        <a href="/user/<%= p[:user] %>"><%=h p[:user] %></a> ◇ <%=h p[:date] %>
+        <a href="/user/<%=h p[:user] %>"><%=h p[:user] %></a> ◇ <%=h p[:date] %>
         <p> <%=h(p[:content]).gsub(/(\r\n|\r|\n)/, "<br>") %> </p>
       </div>
     </div>

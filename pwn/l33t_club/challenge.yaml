@@ -20,7 +20,7 @@ tags:
 
 files:
   - ./challenge/l33t-club
-  - ./libc-2.27.so
+  - ./libc-2.31.so
 
 state: hidden
 
