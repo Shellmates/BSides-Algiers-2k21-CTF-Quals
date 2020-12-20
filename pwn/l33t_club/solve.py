@@ -3,7 +3,7 @@ from pwn import *
 import ctypes
 
 elf = ELF("./challenge/l33t-club")
-remote_libc = ELF("./libc-2.27.so")
+remote_libc = ELF("./libc-2.31.so")
 
 HOST, PORT = "localhost", 1337
 
