@@ -117,11 +117,15 @@ def send_image():
         return None
 
     folder, filename = path.split('/', 1)
+    filename = secure_filename(filename)
     if folder != "static" and folder != session["uid"]:
         return None
 
     target = os.path.join(APP_ROOT, UPLOAD_FOLDER, folder, filename)
-    return send_file(target)
+    try:
+        return send_file(target)
+    except:
+        return render_template("404.html"), 404
 
 # URL defaults
 
