@@ -1,4 +1,4 @@
-# Challenge Name
+# Pizza Delivery Service
 
 **`Author:`** [LaidMalik](https://github.com/malikDaCoda)
 
