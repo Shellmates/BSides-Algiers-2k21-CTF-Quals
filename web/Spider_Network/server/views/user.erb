@@ -2,7 +2,7 @@
 
 <div class="grid">
   <section class="user">
-    <img class="avatar" src="<%= user[:avatar] %>" />
+    <img class="avatar" src="<%=h user[:avatar] %>" />
     <h2> <%=h params[:user] %> </h2>
     <%=h user[:description] %>
   </section>
@@ -11,7 +11,7 @@
     <% posts.each do |p| %>
       <div class="box">
         <div class="box-body">
-          <a href="/user/<%= p[:user] %>"><%=h p[:user] %></a> ◇ <%=h p[:date] %>
+          <a href="/user/<%=h p[:user] %>"><%=h p[:user] %></a> ◇ <%=h p[:date] %>
           <p> <%=h p[:content] %> </p>
         </div>
       </div>
