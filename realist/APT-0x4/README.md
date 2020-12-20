@@ -9,6 +9,6 @@ Provide us with a solution to recover the encrypted files.
 I've provided you with a sample file that you can try your decryptor on to see if it works.
 
 ## Write-up (todo)
-
+Check this [PR](https://github.com/Shellmates/BSides-Algiers-2k21-CTF-Quals/pull/11) for a general overview on the solution.
 
 Flag: `shellmates{wh3r3_d1d_th3_cr1m1n4l_g0?_h3_f4il3ds0mw4re!}`
