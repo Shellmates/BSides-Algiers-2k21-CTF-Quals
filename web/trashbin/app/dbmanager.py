@@ -8,11 +8,9 @@ class DBManager:
     def __init__(self, database):
         self.db = database
         self.column_names = ["id", "title", "text"]
-        self.last_reset = int(time.time())
-        self.reset_interval = 60 * 15
 
-        # set max db size to 5M
-        self.max_size = 1024 * 1024 * 1
+        # set max db size to 100M
+        self.max_size = 1024 * 1024 * 100
 
         self.init_db()
 
@@ -47,10 +45,7 @@ class DBManager:
         return self.execute_query("SELECT * FROM pastes WHERE id=?", (paste_id,)) != []
 
     def add_paste(self, paste_id, title, text):
-        if (
-            int(time.time()) - self.last_reset > self.reset_interval
-            or os.path.getsize(self.db) > self.max_size
-        ):
+        if os.path.getsize(self.db) > self.max_size:
             self.restore()
 
         self.execute_query(
