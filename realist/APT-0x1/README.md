@@ -20,6 +20,7 @@ DISCLAIMER: It is strongly adviced to use a VM if you're working on Windows. The
 The archive is protected with the password: "iunderstandtherisk".
 
 ## Write-up (todo)
+Check this [PR](https://github.com/Shellmates/BSides-Algiers-2k21-CTF-Quals/pull/11) for a general overview on the solution.
 
 
 Flag: `shellmates{tr1ck_4l1_th3_t0Ols_h4cK_41l_tH3_th1Ngs_st0mP_0n_uR_f@ce!}`
