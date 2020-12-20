@@ -1,4 +1,4 @@
-# Challenge Name
+# ARM32
 
 **`Authors:`** [m0kr4n3](https://github.com/m0kr4n3) & [LaidMalik](https://github.com/malikDaCoda)
 

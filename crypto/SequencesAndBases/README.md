@@ -1,4 +1,4 @@
-# Challenge Name : Sequences & Bases
+# Sequences & Bases
 
 **`Author:`** [m0kr4n3](https://github.com/m0kr4n3)
 
