@@ -21,7 +21,7 @@ decay: 100
 minimum: 50
 
 flags:
-  - shellmates{sH1t_why_d1dnt_w3_juSt_st1ck_t0_js0n_4nd_d1s4bl3_d3bug?!!}
+  - shellmates{sH1t_why_d1dnt_w3_juSt_st1ck_t0_js0n_4nd_d1s4bl3_d3bug?!}
 
 tags:
   - web
