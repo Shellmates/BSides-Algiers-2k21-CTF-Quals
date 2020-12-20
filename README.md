@@ -16,3 +16,7 @@ It will be made public after the CTF ends.
 ## Contribution Guidelines
 
 Consider reading our [Contribution Guidelines](CONTRIBUTING.md) before making a contribution.
+
+## License
+
+Distributed under the GNU GPLv3 License. See [`LICENSE`](./LICENSE) for more information.
