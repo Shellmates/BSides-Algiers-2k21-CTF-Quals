@@ -17,9 +17,9 @@
 <section>
   <% users.each do |u| %>
     <div class="box">
-      <img class="box-avatar" src="<%= u[:avatar] %>" />
+      <img class="box-avatar" src="<%=h u[:avatar] %>" />
       <div class="box-body">
-        <a href="/u/<%= u[:name] %>"><%=h u[:name] %></a>
+        <a href="/u/<%=h u[:name] %>"><%=h u[:name] %></a>
         <p> <%=h u[:description] %> </p>
       </div>
     </div>
