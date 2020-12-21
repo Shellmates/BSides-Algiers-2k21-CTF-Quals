@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
   <a href="https://bsidesalgiers.com">
-    <img src="https://res.cloudinary.com/hfz/image/upload/v1607899536/BSides_logo.png" alt="Logo" width="200">
+    <img src="https://res.cloudinary.com/hfz/image/upload/v1608582059/BSides_Algiers_ez83hg.png" alt="Logo" width="200">
   </a>
 
   <h3 align="center">CTF Qualification Round</h3>
